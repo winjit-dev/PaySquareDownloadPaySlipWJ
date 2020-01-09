@@ -85,7 +85,7 @@ async function waitForFileToDownload(page, downloadPath, filenameSearch) {
 async function selectAndDownloadPaySlip(page, value) {
   try {
     await page.select(monthSelector, value);
-    await page.waitFor(500);
+    await page.waitFor(1000);
     try {
       const filename = await page.$eval(payslipSelector, res => {
         console.log(res);
